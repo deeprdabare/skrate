@@ -9,12 +9,12 @@ Python version : 3.10.0
 
 https://ticketingappskrate.herokuapp.com/users/new
 
-https://ticketingappskrate.herokuapp.com/tickets/all
-https://ticketingappskrate.herokuapp.com/tickets/new
-https://ticketingappskrate.herokuapp.com/tickets/?status=open
-https://ticketingappskrate.herokuapp.com/tickets/?priority=low
-https://ticketingappskrate.herokuapp.com/tickets/markAsClosed
-https://ticketingappskrate.herokuapp.com/tickets/delete
+https://ticketingappskrate.herokuapp.com/tickets/all 
+https://ticketingappskrate.herokuapp.com/tickets/new 
+https://ticketingappskrate.herokuapp.com/tickets/?status=open 
+https://ticketingappskrate.herokuapp.com/tickets/?priority=low 
+https://ticketingappskrate.herokuapp.com/tickets/markAsClosed 
+https://ticketingappskrate.herokuapp.com/tickets/delete 
 
 **Additional end points for testing purpose:**
 
