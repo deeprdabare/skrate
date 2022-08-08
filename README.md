@@ -5,21 +5,97 @@ DB is hosted on Mongo **Atlas**.
 
 Python version : 3.10.0
 
+**DEPLOYMENT READY :**
+The app is deployment ready. Also it is deployed on Heroku server, the url is mentioned below.
+To checkout and deploye :
+
+Checkout the code in an environment on local :
+- pip install requirements.py
+- source ../{ENV_DIRECTORY}/bin/activate
+- cd ticketingSystem
+- python manage.py runserver 8081
+
 **Following are the endpoints, to use:**
 
 https://ticketingappskrate.herokuapp.com/users/new
 
-https://ticketingappskrate.herokuapp.com/tickets/all 
+Sample input JSON : (No Authorization)
 
-https://ticketingappskrate.herokuapp.com/tickets/new 
+{
+    "username" : "Admin1",
+    "role" : "admin"
+}
 
-https://ticketingappskrate.herokuapp.com/tickets/?status=open 
+OR
 
-https://ticketingappskrate.herokuapp.com/tickets/?priority=low 
+{
+    "username" : "Emp1",
+    "role" : "employee"
+}
 
-https://ticketingappskrate.herokuapp.com/tickets/markAsClosed 
+Response :
 
-https://ticketingappskrate.herokuapp.com/tickets/delete 
+{"token"  :   "ahkdbfksbfks"}
+
+**NOTE  : Save this token for further use !!**
+
+
+https://ticketingappskrate.herokuapp.com/tickets/all (Anyone)
+
+https://ticketingappskrate.herokuapp.com/tickets/new (Only Admin)
+
+Sample input JSON : 
+NOTE  : assignedTo is the "id" of user
+
+{
+    "title" : "First ticket",
+    "description" : "Describe temp",
+    "assignedTo" : 4
+}
+
+Response :
+
+{
+    "title": "First ticket",
+    "description": "Describe temp",
+    "assignedTo": 4,
+    "status": "open",
+    "priority": "low"
+}
+
+https://ticketingappskrate.herokuapp.com/tickets/?status=open (User and Admin)
+
+https://ticketingappskrate.herokuapp.com/tickets/?priority=low (User and Admin)
+
+https://ticketingappskrate.herokuapp.com/tickets/markAsClosed (Admin and ticket user)
+
+Sample input JSON : 
+{
+    "ticketid":1
+}
+
+Response :
+
+{
+    "title": "First ticket",
+    "description": "Describe temp",
+    "assignedTo": 4,
+    "status": "close",
+    "priority": "low"
+}
+
+https://ticketingappskrate.herokuapp.com/tickets/delete   (Admin)
+
+Sample input JSON : 
+{
+    "ticketid":1
+}
+
+Response :
+
+{
+    "message": "Ticket deleted"
+}
 
 
 **Additional end points for testing purpose:**
