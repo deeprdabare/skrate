@@ -134,3 +134,15 @@ def see_all_tokens(request):
     if token_serializer.is_valid():
         return JsonResponse(tokens, safe = False, status=status.HTTP_201_CREATED)
     return JsonResponse(token_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def test_request(request):
+    return JsonResponse({"message":"Pong !!"}, status=status.HTTP_201_CREATED)
+
+
+

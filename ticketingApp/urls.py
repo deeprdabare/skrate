@@ -12,4 +12,5 @@ urlpatterns = [
     # For testing purpose
     re_path(r'^users/all$', views.users_list),
     re_path(r'^tokens/all$', views.see_all_tokens),
+    re_path(r'^ping/$', views.test_request),
 ]
