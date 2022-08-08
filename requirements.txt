@@ -8,3 +8,4 @@ pymongo==4.2.0
 python-dotenv==0.20.0
 pytz==2022.1
 sqlparse==0.2.4
+gunicorn
