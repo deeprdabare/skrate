@@ -24,6 +24,9 @@ https://ticketingappskrate.herokuapp.com/users/all
 **URLs**:
 
 **Application URL** : https://ticketingappskrate.herokuapp.com/
+
 **LOG File URL**    : https://dashboard.heroku.com/apps/ticketingappskrate/logs
+
 **Demo video URL**  : https://drive.google.com/file/d/1Im42kXLWjIQkXFBI4gaFTP7WUFfAXSUq/view?usp=sharing
+
 **POSTMAN collection**  : https://www.postman.com/research-technologist-99045294/workspace/skrate-calibre/collection/19639060-7435a8bc-6711-4496-bb07-89913ea0887a?action=share&creator=19639060
