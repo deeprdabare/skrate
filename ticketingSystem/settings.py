@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import urllib
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,14 +84,11 @@ WSGI_APPLICATION = 'ticketingSystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'mongo': {
         'ENGINE': 'djongo',
         'NAME': 'tickets_db',
-        'HOST': '127.0.0.1',
-        'PORT': 27017
+        'CLIENT': {
+            'host': 'mongodb+srv://deeprdabare:' + urllib.parse.quote_plus('mongopass') + '@ticketingappcluster.tgola9r.mongodb.net/?retryWrites=true&w=majority'
+        }    
     }
 }
 
